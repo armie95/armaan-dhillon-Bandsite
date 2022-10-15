@@ -1,0 +1,48 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Avenir Next";
+}
+
+body {
+  text-rendering: optimizeSpeed;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+.wrapper--header {
+  width: 100%;
+  background: #323232;
+}
+
+.hero {
+  display: flex;
+  background-image: url("/assets/Images/hero-bio.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+.hero {
+  height: 65vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-fit: center;
+     object-fit: center;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.navbar {
+  background-color: lightgreen;
+}/*# sourceMappingURL=bio.css.map */

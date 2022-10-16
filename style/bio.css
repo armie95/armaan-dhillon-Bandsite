@@ -1,0 +1,193 @@
+@font-face {
+  font-family: "AveNext";
+  src: url(../assets/Font/AvenirNextLTPro-Regular.otf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: "AveNext";
+  src: url(../assets/Font/AvenirNextLTPro-Bold.otf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: "AveNext";
+  src: url(../assets/Font/AvenirNextLTPro-Demi.otf);
+  font-weight: bolder;
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "AveNext";
+}
+
+body {
+  text-rendering: optimizeSpeed;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+.wrapper--header {
+  width: 100%;
+  background: #323232;
+}
+
+.hero {
+  background-image: url("/assets/Images/hero-bio.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.navbar {
+  background-color: #323232;
+  height: 90px;
+  padding-top: 20px;
+}
+.navbar__logo {
+  width: 100%;
+}
+.navbar__img {
+  margin: 0 auto;
+}
+.navbar__pages {
+  width: 100%;
+  height: 51px;
+}
+.navbar__list {
+  display: flex;
+  list-style-type: none;
+  height: 100%;
+  gap: 10px;
+  justify-content: space-around;
+  align-items: center;
+}
+.navbar__item {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar__link {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.navbar .active {
+  border-bottom: 3px solid #fff;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  height: 280px;
+  position: relative;
+}
+.hero__title {
+  color: white;
+  font-weight: 200;
+  font-size: 30px;
+  padding-left: 2rem;
+  z-index: 1;
+}
+.hero__shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.3;
+}
+
+.p-24px, .container {
+  padding: 2rem 0;
+}
+
+.wrapper {
+  width: 94%;
+  margin: 0 auto;
+}
+
+.container {
+  width: 94%;
+  margin: 0 auto;
+}
+
+.container img,
+.container picture {
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.about__title {
+  font-weight: 100;
+  font-size: 2rem;
+}
+.about__quote {
+  margin-bottom: 2rem;
+}
+.about__quote__text {
+  line-height: 2rem;
+  font-weight: bold;
+}
+.about__author {
+  padding-top: 1rem;
+}
+
+.bio__subtitle {
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
+.bio__text {
+  font-weight: 100;
+  line-height: 1.5rem;
+}
+.bio__paragraph {
+  margin-bottom: 1rem;
+}
+
+.wrapper--gallery {
+  background-color: #ebebeb;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.gallery__title {
+  padding: 1rem 0;
+  font-size: 2rem;
+  font-weight: 100;
+}
+.gallery__images-list {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 1rem;
+  display: flex;
+}
+.gallery__img {
+  flex-basis: 300px;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.gallery__img img {
+  margin: 0;
+}
+
+.wrapper--footer {
+  background-color: #323232;
+}/*# sourceMappingURL=bio.css.map */

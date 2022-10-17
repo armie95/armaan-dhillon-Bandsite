@@ -42,7 +42,7 @@ picture {
 }
 
 .hero {
-  background-image: url("/assets/Images/hero-bio.jpg");
+  background-image: url("../assets/Images/hero-bio.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

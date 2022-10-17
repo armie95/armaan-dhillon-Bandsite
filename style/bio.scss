@@ -1,5 +1,4 @@
 @import "./global";
-@import "./variables";
 
 /* Box sizing rules */
 *,
@@ -42,19 +41,41 @@ picture {
     height: $nav-height;
     padding-top: 20px;
 
+    @include breakpoint(tablet) {
+        display: flex;
+        align-items: center;
+        padding-top: 0;
+        gap: 3rem;
+    }
+
+
     &__logo {
         width: 100%;
+
+        @include breakpoint(tablet) {
+            max-width: fit-content;
+        }
+
     }
 
 
 
     &__img {
         margin: 0 auto;
+
+        @include breakpoint(tablet) {
+            margin-left: 2rem;
+        }
     }
 
     &__pages {
         width: 100%;
         height: calc($nav-height - 39px);
+
+        @include breakpoint(tablet) {
+            width: 300px;
+            height: $nav-height;
+        }
     }
 
     &__list {
@@ -107,6 +128,10 @@ picture {
 
     position: relative;
 
+    @include breakpoint(tablet) {
+        height: 600px;
+    }
+
     &__title {
         color: white;
         font-weight: 200;
@@ -114,6 +139,10 @@ picture {
 
         padding-left: 2rem;
         z-index: 1;
+
+        @include breakpoint(tablet) {
+            font-size: 80px;
+        }
     }
 
     // &::after {
@@ -148,20 +177,21 @@ picture {
     }
 }
 
-.p-24px {
-    padding: 2rem 0;
-}
-
+// .p-24px {
+//     padding: 2rem 0;
+// }
 .wrapper {
-    width: 94%;
+    // width: 94%;
+    padding: 0 1.3rem;
     margin: 0 auto;
+
 }
 
-.container {
-    width: 94%;
-    margin: 0 auto;
-    @extend .p-24px;
-}
+//.container {
+//     width: 94%;
+//     margin: 0 auto;
+//     @extend .p-24px;
+// }
 
 
 // ===============
@@ -172,46 +202,134 @@ picture {
 // }
 
 
-.container img,
-.container picture {
-    @include img-style;
-}
+// .container img,
+// .container picture {
+//     @include img-style;
+// }
 
 .about {
+    padding-top: 2rem;
+
+
+
     &__title {
         font-weight: 100;
-        font-size: 2rem;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+
+        @include breakpoint(tablet) {
+            margin-left: 2rem;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            margin-top: 1rem;
+        }
     }
 
     &__quote {
         margin-bottom: 2rem;
+
+        @include breakpoint(tablet) {
+            max-width: 80%;
+            margin: auto;
+        }
+
+
     }
 
     &__quote__text {
         line-height: 2rem;
         font-weight: bold;
+
+        @include breakpoint(tablet) {
+            font-size: 1.6rem;
+            line-height: 2.3rem;
+
+        }
+
+        @include breakpoint(desktop) {
+            display: block;
+            max-width: 70%;
+        }
+
     }
 
     &__author {
         padding-top: 1rem;
     }
 
+    &__img {
+        aspect-ratio: 2/1.1;
+        object-fit: conver;
+        margin-bottom: 1rem;
+
+        @include breakpoint(tablet) {
+            max-width: 80%;
+            margin: auto;
+            margin-bottom: 2rem;
+        }
+    }
+
+    @include breakpoint(tablet) {
+        margin-bottom: 2rem;
+    }
+
+
+    @include breakpoint(desktop) {
+        margin-bottom: 4rem;
+    }
 }
 
+
+
+
 .bio {
+    @include breakpoint(tablet) {
+        max-width: 80%;
+        margin: auto;
+    }
 
     &__subtitle {
         font-weight: 100;
         margin-bottom: 1rem;
+
+        @include breakpoint(tablet) {
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+
+        @include breakpoint(desktop) {
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            font-weight: 100;
+        }
     }
 
     &__text {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+
         font-weight: 100;
         line-height: 1.5rem;
+
+        @include breakpoint(desktop) {
+            line-height: 2rem;
+            margin-bottom: 2rem;
+        }
+
     }
 
     &__paragraph {
         margin-bottom: 1rem;
+        flex-basis: 100%;
+
+        flex-shrink: 1;
+        flex-grow: 1;
+
+        @include breakpoint(tablet) {
+            flex-basis: 280px;
+            flex-grow: 1;
+        }
     }
 }
 
@@ -235,16 +353,164 @@ picture {
     }
 
     &__img {
-        flex-basis: 300px;
+        flex-basis: 100%;
         flex-grow: 1;
         flex-shrink: 1;
 
         img {
             margin: 0;
         }
+
+        @include breakpoint(tablet) {
+            flex-basis: 30%;
+        }
+
+        @include breakpoint(desktop) {
+            flex-basis: 300px;
+        }
+    }
+
+    @include breakpoint(desktop) {
+        max-width: 80%;
+        margin-bottom: 2rem;
     }
 }
 
 .wrapper--footer {
     background-color: $background-color;
+}
+
+.footer {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    color: white;
+
+    position: relative;
+
+
+
+    &__title {
+        font-weight: 100;
+
+        @include breakpoint(desktop) {
+            font-size: 2rem;
+        }
+    }
+
+    &__links {
+        @include photos-grid;
+        gap: 30px;
+        margin: 2rem 0;
+
+        @include breakpoint(tablet) {
+            max-width: fit-content;
+            margin: 0;
+            align-items: center;
+        }
+
+        @include breakpoint(desktop) {
+            gap: 50px;
+            margin-left: 20px;
+        }
+
+    }
+
+    &__icon {
+        @include breakpoint(desktop) {
+            transform: scale(1.4);
+        }
+    }
+
+    &__info {
+        font-weight: 100;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    &__email {
+        text-decoration: none;
+        font-size: 14.14px;
+        color: white;
+    }
+
+    &__col {
+        flex-basis: 230px;
+        margin-bottom: 1rem;
+
+        @include breakpoint(desktop) {
+            flex-basis: 30%;
+        }
+
+    }
+
+    &__contacts {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-shrink: 1;
+        flex-grow: 0;
+
+        @include breakpoint(tablet) {
+            margin-bottom: 1rem;
+        }
+
+        @include breakpoint(desktop) {
+            max-width: 70%;
+            line-height: 1.35rem;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 1.4rem;
+
+        @include breakpoint(tablet) {
+            display: none;
+        }
+
+
+    }
+
+    &__copyrights {
+        font-weight: 100;
+        font-size: 12px;
+        text-align: start;
+    }
+
+    &__media {
+        @include breakpoint(tablet) {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            gap: 2rem;
+        }
+    }
+
+    &__logo--mobile {
+        @include breakpoint(tablet) {
+            position: absolute;
+            right: 1rem;
+            top: 0;
+            padding: 2rem 1rem 0 0;
+            display: block;
+        }
+
+        @include breakpoint(desktop) {
+            & img {
+                width: 150px;
+            }
+        }
+    }
+
+    @include breakpoint(desktop) {
+        max-width: 80%;
+    }
+}
+
+.hide {
+    display: none;
+
+    @include breakpoint(tablet) {
+        display: block;
+    }
 }

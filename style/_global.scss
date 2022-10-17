@@ -1,38 +1,20 @@
+@import "./variables";
+@import './mixins';
+
 @font-face {
-    font-family: 'AveNext' ;
+    font-family: 'AveNext';
     src: url(../assets/Font/AvenirNextLTPro-Regular.otf);
     font-weight: normal;
 }
 
 @font-face {
-    font-family: 'AveNext' ;
+    font-family: 'AveNext';
     src: url(../assets/Font/AvenirNextLTPro-Bold.otf);
     font-weight: bold;
 }
 
 @font-face {
-    font-family: 'AveNext' ;
+    font-family: 'AveNext';
     src: url(../assets/Font/AvenirNextLTPro-Demi.otf);
     font-weight: bolder;
 }
-
-
-//Mixins:
-@mixin img-style {
-    margin: 1rem 0;
-    width: 100%;
-    // border: 10px solid red;
-}
-
-// @mixin photos-grid($direction: row) {
-//     display: flex;
-//     flex-direction: $direction;
-//}
-
-@mixin photos-grid() {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    gap:1rem;
-}
-

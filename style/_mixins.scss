@@ -1,0 +1,47 @@
+//Mixins:
+@mixin img-style {
+    margin: 1rem 0;
+    width: 100%;
+    // border: 10px solid red;
+}
+
+// @mixin photos-grid($direction: row) {
+//     display: flex;
+//     flex-direction: $direction;
+//}
+
+@mixin photos-grid() {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+
+
+
+
+// DESKTOP screen sizes are defined at 1280px, but are applied to screen sizes 1280px and greater.
+// TABLET screen sizes are defined at 768px, but are applied to screen sizes from 768px to 1279px
+//MOBILE screen sizes are defined at 320px, but are applied to screen sizes 767px and below
+
+
+@mixin breakpoint($point) {
+    @if $point==mobile {
+        @media screen and (min-width: 320px) {
+            @content;
+        }
+    }
+
+    @else if $point==tablet {
+        @media screen and (min-width: 768px) {
+            @content;
+        }
+    }
+
+    @else if $point==desktop {
+        @media screen and (min-width: 1280px) {
+            @content;
+        }
+    }
+}

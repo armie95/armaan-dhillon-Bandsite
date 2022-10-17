@@ -30,7 +30,7 @@
 
     <!--hero-->
     <section class="hero">
-        <!-- <div class="hero__shade"></div> -->
+        <div class="hero__shade"></div>
         <h2 class="hero__title">The Bees Knees</h2>
     </section>
 
@@ -39,22 +39,22 @@
         <section class="wrapper--about wrapper">
             <div class="about">
                 <h2 class="about__title">About the Musicians</h2>
+
+
+                <div class="about__content">
+
+                    <div><img class="about__img" src="./assets/Images/band.jpg"></div>
+                </div>
+
+
+                <!--quote-->
+                <blockquote class="about__quote">
+                    <q class="about__quote__text">We push each other to be the best. It’s not uncommon for one of us to
+                        say ‘this needs to be better, back to the drawing board’
+                    </q>
+                    <address class="about__author">- Bryan Teddy, lead vocalist of The Bees Knees</address>
+                </blockquote>
             </div>
-
-            <div class="about__content">
-
-                <div><img class="about__img" src="./assets/Images/band.jpg"></div>
-            </div>
-
-
-            <!--quote-->
-            <blockquote class="about__quote">
-                <q class="about__quote__text">We push each other to be the best. It’s not uncommon for one of us to
-                    say ‘this needs to be better, back to the drawing board’
-                </q>
-                <address class="about__author">- Bryan Teddy, lead vocalist of The Bees Knees</address>
-            </blockquote>
-
 
             <!--Biography-->
             <article class="bio">
@@ -107,61 +107,93 @@
             </section>
         </section>
         </div>
+    </main>
+    <!--footer-->
+    <footer class="wrapper--footer">
+        <section class="footer wrapper">
 
-        <!--footer-->
-        <footer class="wrapper--footer">
-            <section class="footer wrapper">
-                <section class="footer__content">
-                    <!--social Medias-->
-                    <section class="footer__social">
-                        <div class="footer__media">
-                            <div>
-                                <h2 class="footer__title">Get In Touch</h2>
-                            </div>
-                            <div class="footer__links">
-                                <a class="footer__link" href="https://instagram.com/ " target="_blank"><img
-                                        class="footer__icon" src="./assets/Icon/SVG/Icon-instagram.svg">Instagram</a>
-                                <a class="footer__link" href="https://www.facebook.com/ " target="_blank"><img
-                                        class="footer__icon" src="./assets/Icon/SVG/Icon-facebook.svg ">Facebook</a>
-                                <a class="footer__link" href="https://twitter.com/ " target="_blank"><img
-                                        class="footer__icon" src="./assets/Icon/SVG/Icon-twitter.svg ">Twitter</a>
-                            </div>
-                        </div>
-                        <div class="footer__logo--tablet">
-                            <a class="footer__link--tablet" href="#home"><img src="./assets/logo/Logo-bandsite.svg "
-                                    alt="bandsite logo"></a>
-                        </div>
-                    </section>
+            <section class="footer__content">
+                <div class="footer__logo--mobile hide">
+                    <a class="footer__link--tablet" href="#home"><img src="./assets/logo/Logo-bandsite.svg "
+                            alt="bandsite logo"></a>
+                </div>
+                <!--social Medias-->
+                <section class="footer__social">
+                    <div class="footer__media">
 
-                    <section class="footer__contacts">
-                        <!--contacts-->
+                        <h2 class="footer__title">Get in Touch</h2>
+                        <div class="footer__links">
+                            <a href="#"><img class="footer__icon" src="./assets/Icon/SVG/Icon-instagram.svg"></a>
+                            <a href="#"><img class="footer__icon" src="./assets/Icon/SVG/Icon-facebook.svg "></a>
+                            <a href="#"><img class="footer__icon" src="./assets/Icon/SVG/Icon-twitter.svg "></a>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section class="footer__contacts">
+                    <!--contacts-->
+
+                    <div class="footer__col">
                         <div class="footer__info">
                             <h4 class="footer__subtitle">Cam Adams</h4>
-                            <p class="footer__position">The Bees Manageement</p>
+                            <p class="footer__position">The Bees Knees Manageement</p>
                         </div>
-                        <div>
-                            <p class="footer__address">503 Broadway Penthouse</p>
-                            <p class="footer__address">New York, Ny 10012, USA</p>
-                        </div>
-                        <div>
-                            <p class="footer__address">Booking Agent for</p>
-                            <p class="footer__address">US / South Amercia / Japan</p>
-                        </div>
-                        <div>
-                            <p><a class="footer__email" href="mailto:pearl.gregg@limitlessag.com "
-                                    target="_blank">pearl.gregg@limitlessag.com></a></p>
-                        </div>
-                    </section>
 
-                    <!---Logo for desktop-->
-                    <section class="footer__logo footer__logo--desktop">
-                        <a class="footer__link--desktop" href="#home"><img src="./assets/Logo/Logo-bandsite.svg"
-                                alt="bandsite logo"></a>
-                    </section>
+                        <div class="footer__info">
+                            <address class="footer__address">503 Broadway Penthouse,</address>
+                            <address class="footer__address">New York, Ny 10012, USA</address>
+                        </div>
+                        <p><a class="footer__email" href="mailto:info@thebeesknees.com"
+                                target="_blank">info@thebeesknees.com</a>
+                        </p>
+                    </div>
+
+                    <div class="footer__col">
+                        <div class="footer__info">
+                            <h4 class="footer__subtitle">Pearl Gregg</h4>
+                            <p class="footer__position">Limitless Artist Group</p>
+                        </div>
+
+                        <div class="footer__info">
+                            <h4 class="footer__subtitle">Booking Agent for</h4>
+                            <address class="footer__address">US / South Amercia / Japan</address>
+                        </div>
+
+                        <div class="footer__info">
+                            <p><a class="footer__email" href="mailto:pearl.gregg@limitlessag.com"
+                                    target="_blank">pearl.gregg@limitlessag.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="footer__col">
+                        <div class="footer__info">
+                            <h4 class="footer__subtitle">Carson Whyte</h4>
+                            <p class="footer__position">ARCH Entertainment</p>
+                        </div>
+
+                        <div class="footer__info">
+                            <h4 class="footer__subtitle">Booking Agent for</h4>
+                            <address class="footer__address">UK / EU / AU</address>
+                        </div>
+
+                        <div class="footer__info">
+                            <p><a class="footer__email" href="mailto:cwhyte@archentertainment.com "
+                                    target="_blank">cwhyte@archentertainment.com</a></p>
+                        </div>
+                    </div>
                 </section>
+
+                <!---Logo for desktop-->
+                <section class="footer__logo">
+                    <a class="footer__link--desktop" href="#home"><img src="./assets/Logo/Logo-bandsite.svg"
+                            alt="bandsite logo"></a>
+                </section>
+
+                <p class="footer__copyrights">Copyright The Bees Knees &copy; 2021 All Rights Reserved</p>
             </section>
-        </footer>
-    </main>
+        </section>
+    </footer>
 </body>
 
 </html>

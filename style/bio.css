@@ -459,9 +459,9 @@ picture {
 }
 .comments__form-container {
   display: flex;
-  width: 100%;
+  width: 97%;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 .comments__title {
   font-size: 2rem;
@@ -471,8 +471,9 @@ picture {
 .comments__form {
   flex-grow: 1;
 }
-.comments__imgae-col {
+.comments__image-col {
   align-self: flex-start;
+  padding-top: 1.15rem;
 }
 .comments__user-image {
   width: 40px;
@@ -493,7 +494,28 @@ picture {
 }
 .comments__input-label {
   display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.88rem;
+  font-weight: 100;
+  color: #afafaf;
+  text-transform: uppercase;
 }
 .comments__input {
   width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px #afafaf solid;
+}
+.comments__comment-input {
+  height: 180px;
+  resize: none;
+}
+.comments__comment-btn {
+  background-color: #323232;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  color: white;
+  text-transform: uppercase;
+  height: 52px;
 }/*# sourceMappingURL=bio.css.map */

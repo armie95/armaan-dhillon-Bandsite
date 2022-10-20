@@ -485,9 +485,9 @@ picture {
 
     &__form-container {
         display: flex;
-        width: 100%;
+        width: 97%;
         justify-content: space-between;
-        gap: 1rem;
+        gap: 1.25rem;
     }
 
 
@@ -502,9 +502,10 @@ picture {
         flex-grow: 1;
     }
 
-    &__imgae-col {
+    &__image-col {
         // flex-grow: 1;
         align-self: flex-start;
+        padding-top: 1.15rem;
     }
 
     &__user-image {
@@ -527,10 +528,33 @@ picture {
 
     &__input-label {
         display: block;
+        margin-bottom: .30rem;
+        font-size: 0.88rem;
+        font-weight: 100;
+        color: $gray-text;
+        text-transform: uppercase;
     }
 
     &__input {
         width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px $gray-text solid;
+    }
+
+    &__comment-input {
+        height: 180px;
+        resize: none;
+    }
+
+    &__comment-btn {
+        background-color: $dark-btn-bg;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.4rem;
+        color: white;
+        text-transform: uppercase;
+        height: 52px;
     }
 
 }

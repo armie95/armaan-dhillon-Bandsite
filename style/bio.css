@@ -151,7 +151,7 @@ picture {
 }
 
 .wrapper {
-  padding: 0 1.3rem;
+  width: 93%;
   margin: 0 auto;
 }
 
@@ -278,6 +278,10 @@ picture {
   padding-bottom: 1rem;
 }
 
+.gallery {
+  max-width: 90%;
+  margin: 0 auto;
+}
 .gallery__title {
   padding: 1rem 0;
   font-size: 2rem;
@@ -305,7 +309,8 @@ picture {
 }
 @media screen and (min-width: 1280px) {
   .gallery__img {
-    flex-basis: 300px;
+    flex-basis: 30%;
+    max-width: 400px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -447,4 +452,48 @@ picture {
   .hide {
     display: block;
   }
+}
+
+.comments {
+  padding: 1rem 0;
+}
+.comments__form-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.comments__title {
+  font-size: 2rem;
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
+.comments__form {
+  flex-grow: 1;
+}
+.comments__imgae-col {
+  align-self: flex-start;
+}
+.comments__user-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 30% center;
+     object-position: 30% center;
+}
+.comments__inputs-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.comments__input-group {
+  flex-grow: 4;
+}
+.comments__input-label {
+  display: block;
+}
+.comments__input {
+  width: 100%;
 }/*# sourceMappingURL=bio.css.map */

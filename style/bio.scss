@@ -160,7 +160,8 @@ picture {
 }
 
 .wrapper {
-    padding: 0 1.3rem;
+    // padding: 0 1.3rem;
+    width: 93%;
     margin: 0 auto;
 
 }
@@ -299,6 +300,9 @@ picture {
 
 .gallery {
 
+    max-width: 90%;
+    margin: 0 auto;
+
     &__title {
         padding: 1rem 0;
         font-size: 2rem;
@@ -324,7 +328,8 @@ picture {
         }
 
         @include breakpoint(desktop) {
-            flex-basis: 300px;
+            flex-basis: 30%;
+            max-width: 400px;
         }
     }
 
@@ -471,4 +476,61 @@ picture {
     @include breakpoint(tablet) {
         display: block;
     }
+}
+
+
+// Comments Section Style:
+.comments {
+    padding: 1rem 0;
+
+    &__form-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+
+    &__title {
+        font-size: 2rem;
+        font-weight: 100;
+        margin-bottom: 1rem;
+    }
+
+
+    &__form {
+        flex-grow: 1;
+    }
+
+    &__imgae-col {
+        // flex-grow: 1;
+        align-self: flex-start;
+    }
+
+    &__user-image {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: 30% center;
+    }
+
+    &__inputs-col {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    &__input-group {
+        flex-grow: 4;
+    }
+
+    &__input-label {
+        display: block;
+    }
+
+    &__input {
+        width: 100%;
+    }
+
 }

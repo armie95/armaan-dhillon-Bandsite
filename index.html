@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BandSite | Home</title>
-    <link rel="stylesheet" href="./style/bio.css">
+    <link rel="stylesheet" href="./styles/bio.css">
 </head>
 
 <body>
@@ -116,20 +116,24 @@
                     <div class="comments__image-col">
                         <img src="./assets/Images/Mohan-muruge.jpg" alt="" class="comments__user-image">
                     </div>
-                    <form action="" class="comments__form">
+                    <form action="" class="comments__form" id="comments-form">
                         <div class="comments__inputs-col">
                             <div class="comments__input-group">
                                 <label for="username" class="comments__input-label">Name</label>
-                                <input type="text" class="comments__input" id="username" placeholder="Enter your name">
+                                <input type="text" class="comments__input" id="username" name="username"
+                                    placeholder="Enter your name">
                             </div>
                             <div class="comments__input-group">
                                 <label for="comment" class="comments__input-label">Comment</label>
                                 <textarea class="comments__input comments__comment-input" id="comment"
-                                    placeholder="Add a new comment"></textarea>
+                                    placeholder="Add a new comment" name="comment"></textarea>
                             </div>
                             <button type="submit" class="comments__comment-btn">Comment</button>
                         </div>
                     </form>
+                </div>
+                <div class="comments__container" id="comments-container">
+
                 </div>
             </section>
         </section>
@@ -222,6 +226,8 @@
             </section>
         </section>
     </footer>
+
+    <script src="./scripts/index-page.js" defer></script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-@import "./global";
+@import "./partials/global";
 
 /* Box sizing rules */
 *,
@@ -10,7 +10,7 @@
 }
 
 html {
-    font-family: "AveNext";
+    font-family: "AveNext", Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -556,5 +556,30 @@ picture {
         text-transform: uppercase;
         height: 52px;
     }
+
+    &__container {
+        width: 80%;
+        margin-left: auto;
+    }
+
+    &__comment-box {
+        width: 100%;
+        border-bottom: 1px solid #e1e1e1;
+        padding-bottom: 0.5rem;
+    }
+
+    &__name-and-date {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__username {
+        font-weight: 900;
+
+    }
+
+    &__comment {}
+
+
 
 }

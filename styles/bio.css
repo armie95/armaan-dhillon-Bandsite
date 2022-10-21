@@ -1,17 +1,17 @@
 @font-face {
   font-family: "AveNext";
   src: url(../assets/Font/AvenirNextLTPro-Regular.otf);
-  font-weight: normal;
+  font-weight: 500;
 }
 @font-face {
   font-family: "AveNext";
   src: url(../assets/Font/AvenirNextLTPro-Bold.otf);
-  font-weight: bold;
+  font-weight: 900;
 }
 @font-face {
   font-family: "AveNext";
   src: url(../assets/Font/AvenirNextLTPro-Demi.otf);
-  font-weight: bolder;
+  font-weight: 100;
 }
 /* Box sizing rules */
 *,
@@ -23,7 +23,7 @@
 }
 
 html {
-  font-family: "AveNext";
+  font-family: "AveNext", Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -518,4 +518,20 @@ picture {
   color: white;
   text-transform: uppercase;
   height: 52px;
+}
+.comments__container {
+  width: 80%;
+  margin-left: auto;
+}
+.comments__comment-box {
+  width: 100%;
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 0.5rem;
+}
+.comments__name-and-date {
+  display: flex;
+  justify-content: space-between;
+}
+.comments__username {
+  font-weight: 900;
 }/*# sourceMappingURL=bio.css.map */

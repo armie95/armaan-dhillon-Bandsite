@@ -7,10 +7,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-html {
     font-family: "AveNext", Arial, Helvetica, sans-serif;
+    font-weight: 100;
 }
 
 body {
@@ -100,11 +98,9 @@ picture {
     }
 
 
-
-
     &__link {
         text-decoration: none;
-
+        font-weight: 100;
         color: white;
 
         display: flex;
@@ -117,8 +113,14 @@ picture {
 
     .active {
         border-bottom: 3px solid #fff;
+
+        & a {
+            font-weight: 500;
+        }
     }
 }
+
+
 
 
 .hero {
@@ -134,7 +136,7 @@ picture {
 
     &__title {
         color: white;
-        font-weight: 200;
+        font-weight: 500;
         font-size: 30px;
 
         padding-left: 2rem;
@@ -172,7 +174,7 @@ picture {
 
 
     &__title {
-        font-weight: 100;
+        font-weight: 500;
         font-size: 1.5rem;
         margin-bottom: 1rem;
 
@@ -191,13 +193,11 @@ picture {
             max-width: 80%;
             margin: auto;
         }
-
-
     }
 
     &__quote__text {
         line-height: 2rem;
-        font-weight: bold;
+        font-weight: 400;
 
         @include breakpoint(tablet) {
             font-size: 1.6rem;
@@ -214,11 +214,12 @@ picture {
 
     &__author {
         padding-top: 1rem;
+        font-style: normal;
     }
 
     &__img {
         aspect-ratio: 2/1.1;
-        object-fit: conver;
+        object-fit: cover;
         margin-bottom: 1rem;
 
         @include breakpoint(tablet) {
@@ -248,7 +249,7 @@ picture {
     }
 
     &__subtitle {
-        font-weight: 100;
+        font-weight: 400;
         margin-bottom: 1rem;
 
         @include breakpoint(tablet) {
@@ -300,18 +301,21 @@ picture {
 
 .gallery {
 
-    max-width: 90%;
+    max-width: 1024px;
+    width: 90%;
     margin: 0 auto;
 
     &__title {
         padding: 1rem 0;
         font-size: 2rem;
-        font-weight: 100;
+        font-weight: 500;
     }
 
     &__images-list {
         @include photos-grid();
         display: flex;
+        max-width: 1024px;
+        margin: 0 auto;
     }
 
     &__img {
@@ -430,8 +434,6 @@ picture {
         @include breakpoint(tablet) {
             display: none;
         }
-
-
     }
 
     &__copyrights {
@@ -447,6 +449,10 @@ picture {
             margin-bottom: 2rem;
             gap: 2rem;
         }
+    }
+
+    &__address {
+        font-style: normal;
     }
 
     &__logo--mobile {
@@ -481,39 +487,48 @@ picture {
 
 // Comments Section Style:
 .comments {
-    padding: 1rem 0;
+    width: 90%;
+    max-width: 1024px;
+
+    margin: 0 auto;
 
     &__form-container {
         display: flex;
-        width: 97%;
+        width: 100%;
         justify-content: space-between;
         gap: 1.25rem;
+
+        padding-bottom: .45rem;
+        border-bottom: 1px solid #e1e1e1;
+        margin-bottom: 1rem;
     }
 
 
     &__title {
         font-size: 2rem;
-        font-weight: 100;
-        margin-bottom: 1rem;
+        font-weight: 500;
+        padding-top: 2rem;
+        margin-bottom: 1.5rem;
     }
 
 
     &__form {
-        flex-grow: 1;
+        flex-grow: 100;
+        margin-bottom: 1rem;
     }
 
     &__image-col {
-        // flex-grow: 1;
         align-self: flex-start;
         padding-top: 1.15rem;
     }
 
     &__user-image {
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        aspect-ratio: 1/1;
         border-radius: 50%;
         object-fit: cover;
         object-position: 30% center;
+        margin: 0 auto;
     }
 
     &__inputs-col {
@@ -522,9 +537,7 @@ picture {
         gap: 1rem;
     }
 
-    &__input-group {
-        flex-grow: 4;
-    }
+    &__input-group {}
 
     &__input-label {
         display: block;
@@ -539,12 +552,29 @@ picture {
         width: 100%;
         height: 40px;
         border-radius: 5px;
-        border: 1px $gray-text solid;
+        border: 1px lightgray solid;
+        padding: 0 1rem;
+        font-size: 1rem;
+        font-family: "AveNext";
+
+
+        &::placeholder {
+            color: $dark-btn-bg;
+            font-weight: 100;
+        }
     }
 
     &__comment-input {
         height: 180px;
         resize: none;
+        padding: 1rem;
+        font-size: 1rem;
+        font-family: AveNext;
+
+        &::placeholder {
+            color: $dark-btn-bg;
+            font-weight: 100;
+        }
     }
 
     &__comment-btn {
@@ -555,17 +585,21 @@ picture {
         color: white;
         text-transform: uppercase;
         height: 52px;
+        font-weight: 100;
     }
 
     &__container {
-        width: 80%;
-        margin-left: auto;
+        width: 100%;
+        max-width: 1024px;
+
+        margin: 0 auto;
     }
 
     &__comment-box {
         width: 100%;
         border-bottom: 1px solid #e1e1e1;
         padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
     }
 
     &__name-and-date {
@@ -578,8 +612,50 @@ picture {
 
     }
 
-    &__comment {}
 
+    //! Comments section style:
+    &__comment {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #e1e1e1;
+    }
 
+    &__comment-image-col {
+        height: 50px;
+        width: 50px;
+        max-width: fit-content;
+        // margin-left: auto;
+    }
 
+    &__comment-col {
+        max-width: 100%;
+        min-width: 80%;
+        margin-right: auto;
+    }
+
+    &__comment-user-image {
+        min-width: 50px;
+        width: 50px;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: 30% center;
+    }
+
+    &__comment-username-and-date {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: .75rem;
+    }
+
+    &__comment-username {
+        font-weight: 400;
+    }
+
+    &__comment-date {
+        color: $gray-text;
+    }
 }

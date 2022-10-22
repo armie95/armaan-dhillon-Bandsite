@@ -2,27 +2,31 @@
 const commentsArray = [
     {
         id: 1,
-        username: "Armaan",
-        commentText: "adfhp aihdspf oahsfo pahdjs fposah f",
-        date: () => (new Date().getTime.toLocaleDateString())
+        username: "Marie",
+        commentText: "Praesentium deleniti qui. Iusto sunt sapiente. Id recusandae quaerat quo. Atque omnis molestiae.",
+        date: new Date(),
+        imgUrl: 'http://placeimg.com/640/480'
     },
     {
         id: 2,
-        username: "Max",
-        commentText: "adfhp aihdspf oahsfo pahdjs fposah f",
-        date: () => (new Date().getTime.toLocaleDateString())
+        username: "Abigail",
+        commentText: "Voluptatem voluptatum ipsum facere eaque consequuntur reprehenderit. Voluptate ullam quia fuga numquam eligendi voluptas iste. Voluptas soluta aut nemo consequatur numquam error rerum non.",
+        date: new Date(),
+        imgUrl: 'http://placeimg.com/640/480'
     },
     {
         id: 3,
-        username: "Anas",
-        commentText: "adfhp aihdspf oahsfo pahdjs fposah f",
-        date: () => (new Date().getTime.toLocaleDateString())
+        username: "Abbie",
+        commentText: "Natus quidem facilis debitis delectus. Natus sed et laboriosam. Eos qui nesciunt voluptates maiores vitae. Est et rerum officiis maxime delectus aut voluptas unde. Laboriosam quo iste totam repellendus ut aliquam officia enim. Officia est impedit atque et veritatis illo aut consequatur voluptates.",
+        date: new Date(),
+        imgUrl: 'http://placeimg.com/640/480'
     },
     {
         id: 4,
-        username: "Alhariri",
-        commentText: "adfhp aihdspf oahsfo pahdjs fposah f",
-        date: () => (new Date().getTime.toLocaleDateString())
+        username: "Clementina",
+        commentText: "Labore quia libero natus nobis eum est aut quas. Est eaque sit magnam modi amet illo. Illo sed omnis molestiae soluta quam voluptatem quod sit. Iure voluptate ullam illum neque autem repudiandae commodi. Assumenda ut nulla commodi occaecati quo non sit exercitationem. Esse iste repudiandae quia quis.",
+        date: new Date(),
+        imgUrl: 'http://placeimg.com/640/480'
     },
 ]
 
@@ -44,80 +48,72 @@ formElement.addEventListener('submit', (e) => {
     // Constructing a new object from the information we got from the form:
     const newComment = {
         id: commentID,
-        name: name,
-        commentText: commentText
+        username: name,
+        commentText: commentText,
+        date: new Date(),
+        imgUrl: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/257.jpg'
     }
 
-    // to added it to the commentsArray:
-    commentsArray.push(newComment)
-    console.log(commentsArray)
-
-
-    // we have to create the html element for the comments:
-    const commentDiv = document.createElement("div");
-    const nameP = document.createElement("p")
-    const commentP = document.createElement("p")
-
-    // Passing the infromation to the html elements that we have created for a comment:
-    commentDiv.classList.add("comment-box")
-
-    nameP.classList.add("username")
-    commentP.classList.add("comment")
-
-    nameP.textContent = newComment.name
-    commentP.innerText = newComment.commentText
-
-    // Add those 2 paragraphs to the comment div that we have created:
-    commentDiv.append(nameP, commentP)
-
-    console.log(commentDiv)
-
-    // Display the new comment:
     displayComment(newComment)
 
     formElement.reset()
 })
 
 
-console.log(commentsArray)
-
-// after collectiong the inputs data, we have to create a new comment object then add it to the comments array:
-
-// then, we have to create a function that will include the steps to create html element for each comment.
-
-// after those comments are ready as html elements, we should display them on the page in the comments sections.
-
-
-
-function addComment(name, comment) {
-    // Create the html elements for those info
-
-
-    // add those html that has been created to the comments sections.
-}
 
 function displayComment(comment) {
     // we have to create the html element for the comments:
-    const commentDiv = document.createElement("div");
-    const nameP = document.createElement("p")
+    const newCommentDiv = document.createElement("div");
+
+    const imgCol = document.createElement("div");
+    const commentCol = document.createElement("div");
+
+    const nameAndDateRow = document.createElement("div");
+
+    const imageElement = document.createElement("img");
+    const nameP = document.createElement("h4")
     const commentP = document.createElement("p")
-    const nameAndDateDiv = document.createElement("div")
-    nameAndDateDiv.classList.add("comments__name-and-date")
+    const dateSpan = document.createElement("p")
 
-    // Passing the infromation to the html elements that we have created for a comment:
-    commentDiv.classList.add("comments__comment-box")
 
-    nameP.classList.add("comments__username")
-    commentP.classList.add("comments__comment")
+    //! give class names to the containers:
+    newCommentDiv.classList.add("comments__comment")
+    imgCol.classList.add("comments__comment-image-col")
+    commentCol.classList.add("comments__comment-col")
+    nameAndDateRow.classList.add("comments__comment-username-and-date")
 
-    nameP.textContent = comment.name
+    //! give class names to the elements:
+    imageElement.classList.add("comments__comment-user-image")
+    nameP.classList.add("comments__comment-username")
+    commentP.classList.add("comments__comment-text")
+    dateSpan.classList.add("comments__comment-date")
+
+    //! add the content to the elements:
+    nameP.textContent = comment.username
     commentP.innerText = comment.commentText
+    dateSpan.innerText = comment.date.toLocaleDateString()
+    imageElement.src = comment.imgUrl
 
-    // Add those 2 paragraphs to the comment div that we have created:
-    nameAndDateDiv.append(nameP, new Date().toLocaleDateString())
-    commentDiv.append(nameAndDateDiv, commentP)
+    //! append the elements to the containers:
+    nameAndDateRow.append(nameP, dateSpan)
+    commentCol.append(nameAndDateRow, commentP)
+    imgCol.append(imageElement)
+    newCommentDiv.append(imgCol, commentCol)
 
-    // Add the new comment div and its content (paragraphs ) to the comments sections:
-
-    commentsSection.appendChild(commentDiv)
+    //! append the containers to the comments section:
+    commentsSection.insertAdjacentElement("afterbegin", newCommentDiv)
 }
+
+
+function displayAllComments() {
+    for (let i = 0; i < commentsArray.length; i++) {
+        const comment = commentsArray[i]
+        displayComment(comment)
+    }
+}
+
+
+
+
+
+displayAllComments(commentsArray)

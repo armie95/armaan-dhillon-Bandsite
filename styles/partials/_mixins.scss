@@ -2,7 +2,7 @@
 @mixin img-style {
     margin: 1rem 0;
     width: 100%;
-   
+
 }
 
 // @mixin photos-grid($direction: row) {
@@ -17,6 +17,17 @@
     gap: 1rem;
 }
 
+
+@mixin btn-style() {
+    background-color: $dark-btn-bg;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    color: white;
+    text-transform: uppercase;
+    height: 52px;
+    font-weight: 100;
+}
 
 
 

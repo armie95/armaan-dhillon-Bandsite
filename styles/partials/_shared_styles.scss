@@ -1,0 +1,301 @@
+@import "./global";
+
+
+
+
+.wrapper {
+    // padding: 0 1.3rem;
+    width: 93%;
+    margin: 0 auto;
+
+}
+
+
+
+
+.navbar {
+    background-color: $background-color;
+    height: $nav-height;
+    padding-top: 20px;
+
+    @include breakpoint(tablet) {
+        display: flex;
+        align-items: center;
+        padding-top: 0;
+        gap: 3rem;
+    }
+
+
+    &__logo {
+        width: 100%;
+
+        @include breakpoint(tablet) {
+            max-width: fit-content;
+        }
+
+    }
+
+
+
+    &__img {
+        margin: 0 auto;
+
+        @include breakpoint(tablet) {
+            margin-left: 2rem;
+        }
+    }
+
+    &__pages {
+        width: 100%;
+        height: calc($nav-height - 39px);
+
+        @include breakpoint(tablet) {
+            width: 300px;
+            height: $nav-height;
+        }
+    }
+
+    &__list {
+        display: flex;
+        list-style-type: none;
+        height: 100%;
+        gap: 10px;
+
+
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    &__item {
+        height: 100%;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    &__link {
+        text-decoration: none;
+        font-weight: 100;
+        color: white;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    .active {
+        border-bottom: 3px solid #fff;
+
+        & a {
+            font-weight: 500;
+        }
+    }
+}
+
+
+
+
+
+.wrapper--footer {
+    background-color: $background-color;
+}
+
+.footer {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    color: white;
+
+    position: relative;
+
+
+
+    &__title {
+        font-weight: 100;
+
+        @include breakpoint(desktop) {
+            font-size: 2rem;
+        }
+    }
+
+    &__links {
+        @include photos-grid;
+        gap: 30px;
+        margin: 2rem 0;
+
+        @include breakpoint(tablet) {
+            max-width: fit-content;
+            margin: 0;
+            align-items: center;
+        }
+
+        @include breakpoint(desktop) {
+            gap: 50px;
+            margin-left: 20px;
+        }
+
+    }
+
+    &__icon {
+        @include breakpoint(desktop) {
+            transform: scale(1.4);
+        }
+    }
+
+    &__info {
+        font-weight: 100;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    &__email {
+        text-decoration: none;
+        font-size: 14.14px;
+        color: white;
+    }
+
+    &__col {
+        flex-basis: 230px;
+        margin-bottom: 1rem;
+
+        @include breakpoint(desktop) {
+            flex-basis: 30%;
+        }
+
+    }
+
+    &__contacts {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-shrink: 1;
+        flex-grow: 0;
+
+        @include breakpoint(tablet) {
+            margin-bottom: 1rem;
+        }
+
+        @include breakpoint(desktop) {
+            max-width: 70%;
+            line-height: 1.35rem;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 1.4rem;
+
+        @include breakpoint(tablet) {
+            display: none;
+        }
+    }
+
+    &__copyrights {
+        font-weight: 100;
+        font-size: 12px;
+        text-align: start;
+    }
+
+    &__media {
+        @include breakpoint(tablet) {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            gap: 2rem;
+        }
+    }
+
+    &__address {
+        font-style: normal;
+    }
+
+    &__logo--mobile {
+        @include breakpoint(tablet) {
+            position: absolute;
+            right: 1rem;
+            top: 0;
+            padding: 2rem 1rem 0 0;
+            display: block;
+        }
+
+        @include breakpoint(desktop) {
+            & img {
+                width: 150px;
+            }
+        }
+    }
+
+    @include breakpoint(desktop) {
+        max-width: 80%;
+    }
+}
+
+.hide {
+    display: none;
+
+    @include breakpoint(tablet) {
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+.wrapper--header {
+    width: 100%;
+    background: $background-color;
+}
+
+.hero {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    height: 280px;
+
+    position: relative;
+
+    @include breakpoint(tablet) {
+        height: 600px;
+    }
+
+    &__title {
+        color: white;
+        font-weight: 500;
+        font-size: 30px;
+
+        padding-left: 2rem;
+        z-index: 1;
+
+        @include breakpoint(tablet) {
+            font-size: 80px;
+        }
+    }
+
+    &__shade {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        right: 0;
+        bottom: 0;
+
+
+        background-color: black;
+        opacity: .3;
+    }
+}

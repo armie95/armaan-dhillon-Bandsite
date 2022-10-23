@@ -6,25 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BandSite | Shows</title>
-    <link rel="stylesheet" href="./styles/bio.css" />
+    <link rel="stylesheet" href="./styles/shows.css" />
 </head>
 
 <body>
     <header class="wrapper--header">
         <nav class="navbar">
             <div class="navbar__logo">
-                <a class="" href="#">
+                <a class="" href="./index.html">
                     <img class="navbar__img" src="./assets/Logo/Logo-bandsite.svg" alt="logo for bandsite" />
                 </a>
             </div>
 
             <div class="navbar__pages">
                 <ul class="navbar__list">
-                    <li class="navbar__item active">
+                    <li class="navbar__item">
                         <a class="navbar__link" href="./index.html">Biography</a>
                     </li>
-                    <li class="navbar__item">
-                        <a class="navbar__link" href="#">Shows</a>
+                    <li class="navbar__item  active">
+                        <a class="navbar__link" href="./shows.html">Shows</a>
                     </li>
                 </ul>
             </div>
@@ -32,7 +32,22 @@
     </header>
 
 
-    <main></main>
+    <!--hero-->
+    <section class="hero">
+        <div class="hero__shade"></div>
+        <div class="hero__title-container">
+            <h4 class="hero__title-1">It's Only Me</h4>
+            <h2 class="hero__title-2">Lil Baby - The Bigger Picture</h2>
+        </div>
+        <iframe class="hero__song-iframe" width="100%" height="120" scrolling="no" frameborder="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/837883024&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+    </section>
+
+    <main>
+        <section class="shows" id="shows">
+
+        </section>
+    </main>
 
 
     <!--footer-->
@@ -132,5 +147,5 @@
         </section>
     </footer>
 
-    <script src="./scripts/index-page.js" defer></script>
+    <script src="./scripts/build-shows-page.js" defer></script>
 </body>

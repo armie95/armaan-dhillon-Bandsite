@@ -70,8 +70,8 @@ function displayTicket(ticket) {
 
     // create h3 for the date text:
     const dateText = document.createElement("h3")
-    dateText.classList.add("shows_text")
-    dateText.textContent = ticket.date.toLocaleDateString()
+    dateText.classList.add("shows__text")
+    dateText.textContent = ticket.date.toDateString()
 
 
     // create label for the title (venue):

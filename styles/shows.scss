@@ -10,7 +10,7 @@
 
     &__song-iframe {
         z-index: 3;
-
+        max-width: 500px;
     }
 
     &__title-container {
@@ -68,6 +68,10 @@
 
     &__text {
         font-weight: 300;
+
+        &:nth-child(2) {
+            font-weight: 400;
+        }
     }
 
     &__buy-tickets {
@@ -78,3 +82,86 @@
         margin-top: 0.5rem;
     }
 }
+
+@include breakpoint(tablet) {
+    .shows {
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__buy-tickets {
+            width: fit-content;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+        }
+
+        &__row {
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        &__label {
+            display: none;
+        }
+
+        &__show:nth-child(2) &__label {
+            display: block;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .hero {
+        align-items: start;
+
+        &__song-iframe {
+            margin-left: 1rem;
+            max-width: 360px;
+        }
+
+        &__title-2 {
+            width: auto;
+        }
+    }
+}
+
+
+
+
+
+
+@include breakpoint(desktop) {
+    .shows {
+        @include wrapper();
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: row;
+        padding: 0 20%;
+        gap: 3rem;
+        justify-content: center;
+        align-items: center;
+        height: 600px;
+
+        &__song-iframe,
+        &__title-container {
+            @include wrapper();
+            transform: scale(1.2);
+            margin: 0 auto;
+            max-width: 40%;
+        }
+
+        &__title-1 {
+            font-size: 1.8rem;
+        }
+
+        &__title-2 {
+            font-size: 2.5rem;
+            width: fit-content;
+        }
+    }
+}
+
+// @import "./test";

@@ -299,3 +299,10 @@
         opacity: .3;
     }
 }
+
+
+@include breakpoint(desktop) {
+    .navbar {
+        padding-left: 8%;
+    }
+}

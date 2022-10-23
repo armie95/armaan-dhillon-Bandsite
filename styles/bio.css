@@ -293,6 +293,11 @@ picture {
   opacity: 0.3;
 }
 
+@media screen and (min-width: 1280px) {
+  .navbar {
+    padding-left: 8%;
+  }
+}
 .hero {
   background-image: url("../assets/Images/hero-bio.jpg");
 }
@@ -566,6 +571,9 @@ picture {
   text-transform: uppercase;
   height: 52px;
   font-weight: 100;
+}
+.comments__comment-btn:hover {
+  background-color: black;
 }
 .comments__container {
   width: 100%;

@@ -9,8 +9,6 @@
 .about {
     padding-top: 2rem;
 
-
-
     &__title {
         font-weight: 500;
         font-size: 1.5rem;
@@ -254,6 +252,8 @@
         padding: 0 1rem;
         font-size: 1rem;
         font-family: "AveNext";
+        background-color: #fafafa;
+
 
 
         &::placeholder {
@@ -268,6 +268,7 @@
         padding: 1rem;
         font-size: 1rem;
         font-family: AveNext;
+        background-color: #fafafa;
 
         &::placeholder {
             color: $dark-btn-bg;
@@ -323,6 +324,7 @@
 
     &__comment-col {
         max-width: 100%;
+        width: 100%;
         min-width: 80%;
         margin-right: auto;
     }
@@ -348,5 +350,55 @@
 
     &__comment-date {
         color: $gray-text;
+    }
+}
+
+
+@include breakpoint(tablet) {
+    .comments {
+
+        &__form-container,
+        &__comment {
+            max-width: 90%;
+            margin-left: auto;
+        }
+    }
+}
+
+@include breakpoint(desktop) {
+
+    .about {
+        @include wrapper();
+
+
+        &__title {
+            margin-bottom: 3rem;
+        }
+    }
+
+    .bio {
+        @include wrapper();
+        max-width: 1550px;
+        margin-top: 3rem;
+    }
+
+    .gallery {
+        @include wrapper();
+        max-width: 1550px;
+
+        margin-top: 3rem;
+        padding-bottom: 2rem;
+
+        &__images-list {
+            @include wrapper();
+            max-width: 1550px;
+        }
+    }
+
+    .footer {
+        @include wrapper();
+        max-width: 1550px;
+
+        margin-top: 3rem;
     }
 }

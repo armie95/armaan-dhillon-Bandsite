@@ -268,7 +268,7 @@ picture {
 }
 @media screen and (min-width: 768px) {
   .hero {
-    height: 600px;
+    height: 500px;
   }
 }
 .hero__title {
@@ -280,7 +280,7 @@ picture {
 }
 @media screen and (min-width: 768px) {
   .hero__title {
-    font-size: 80px;
+    font-size: 4rem;
   }
 }
 .hero__shade {

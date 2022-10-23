@@ -270,7 +270,7 @@
     position: relative;
 
     @include breakpoint(tablet) {
-        height: 600px;
+        height: 500px;
     }
 
     &__title {
@@ -282,7 +282,7 @@
         z-index: 1;
 
         @include breakpoint(tablet) {
-            font-size: 80px;
+            font-size: 4rem;
         }
     }
 

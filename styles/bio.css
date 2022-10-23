@@ -268,7 +268,7 @@ picture {
 }
 @media screen and (min-width: 768px) {
   .hero {
-    height: 600px;
+    height: 500px;
   }
 }
 .hero__title {
@@ -280,7 +280,7 @@ picture {
 }
 @media screen and (min-width: 768px) {
   .hero__title {
-    font-size: 80px;
+    font-size: 4rem;
   }
 }
 .hero__shade {
@@ -530,6 +530,7 @@ picture {
   padding: 0 1rem;
   font-size: 1rem;
   font-family: "AveNext";
+  background-color: #fafafa;
 }
 .comments__input::-moz-placeholder {
   color: #323232;
@@ -549,6 +550,7 @@ picture {
   padding: 1rem;
   font-size: 1rem;
   font-family: AveNext;
+  background-color: #fafafa;
 }
 .comments__comment-input::-moz-placeholder {
   color: #323232;
@@ -610,6 +612,7 @@ picture {
 }
 .comments__comment-col {
   max-width: 100%;
+  width: 100%;
   min-width: 80%;
   margin-right: auto;
 }
@@ -633,4 +636,49 @@ picture {
 }
 .comments__comment-date {
   color: #afafaf;
+}
+
+@media screen and (min-width: 768px) {
+  .comments__form-container, .comments__comment {
+    max-width: 90%;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about {
+    max-width: 1920px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .about__title {
+    margin-bottom: 3rem;
+  }
+  .bio {
+    max-width: 1920px;
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1550px;
+    margin-top: 3rem;
+  }
+  .gallery {
+    max-width: 1920px;
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1550px;
+    margin-top: 3rem;
+    padding-bottom: 2rem;
+  }
+  .gallery__images-list {
+    max-width: 1920px;
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1550px;
+  }
+  .footer {
+    max-width: 1920px;
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1550px;
+    margin-top: 3rem;
+  }
 }/*# sourceMappingURL=bio.css.map */

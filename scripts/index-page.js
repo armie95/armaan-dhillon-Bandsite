@@ -1,4 +1,59 @@
-// Creating the array of the comments objects:
+
+
+const apiKey = '9100b3a8-05e5-4ee3-9514-3198df6acb60';
+//'9100b3a8 - 05e5 - 4ee3 - 9514 - 3198df6acb60'
+
+//get comments url =
+//post comments url ='https://project-1-api.herokuapp.com/comments/?api_key=9100b3a8-05e5-4ee3-9514-3198df6acb60';
+//const makeGetRequest = () => {
+//const commentsQuery = inputField
+//const endpoint = ${aprkey}${commentsQuery}
+
+//}
+/*This fetch request is getting the data from the backend and returning to the browser.*/
+const BASE_URL = "https://project-1-api.herokuapp.com/"
+const API_KEY = "?api_key=9100b3a8-05e5-4ee3-9514-3198df6acb60";
+
+const buildURL = (endPoint) => {
+    return `${BASE_URL}${endPoint}/$ {API_Key}`
+}
+
+const promise = fetch(`${BASE_URL}comments/${API_KEY}`, {
+    method: "GET",
+    headers: { "Content-type": "application/json" }
+}).then(res => {
+    return res.json()
+}).then(data => {
+    console.log(data);
+}).catch(err => {
+    console.log(err.message);
+});
+
+
+
+
+/*Post request pushing new data into th database */
+
+// const BASEURL = "https://project-1-api.herokuapp.com/";
+// const API_KEY_POST = ;
+
+/*Gets the show dates for the bands and console log into the browser url  getting the response*/
+/* we used the fetch method and created 2 varables holding our base url for the backend endpoint and and api key hlding the credentials*/
+ /* we will working on displayng onto page. */
+const promised = fetch(`${BASE_URL}showdates/${API_KEY}`, {
+    method: "GET",
+    headers: { "Content-type": "application/json" }
+}).then(res => {
+    return res.json()
+}).then(data => {
+    console.log(data);
+}).catch(err => {
+    console.log(err.message);
+});
+
+
+
+
 const commentsArray = [
     {
         id: 1,

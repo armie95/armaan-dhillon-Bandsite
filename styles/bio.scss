@@ -304,6 +304,11 @@
 
     }
 
+    &__comment-id-style {
+        background-color: red;
+
+    }
+
 
     //! Comments section style:
     &__comment {
@@ -344,13 +349,16 @@
         padding-bottom: .75rem;
     }
 
-    &__comment-username {
+    &__comment-name-style {
         font-weight: 400;
     }
 
     &__comment-date {
         color: $gray-text;
     }
+
+
+
 }
 
 

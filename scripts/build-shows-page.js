@@ -9,30 +9,59 @@ showsTitle.textContent = "Shows"
 
 showsSection.append(showsTitle)
 
+const BASE_URL = "https://project-1-api.herokuapp.com/"
+const API_KEY = "?api_key=9100b3a8-05e5-4ee3-9514-3198df6acb60";
 
-// ! The tickets Array:
-const ticketsList = [
-    {
-        date: new Date(),
-        venue: "Ronald Lane",
-        location: "San Frrancisco, CA"
-    },
-    {
-        date: new Date(),
-        venue: "Pier 3 East",
-        location: "San Frrancisco, CA"
-    },
-    {
-        date: new Date(),
-        venue: "Ronald Lane",
-        location: "San Frrancisco, CA"
-    },
-    {
-        date: new Date(),
-        venue: "Pier 3 East",
-        location: "San Frrancisco, CA"
-    },
-]
+const buildURL = (endPoint) => {
+    return `${BASE_URL}${endPoint}/$ {API_Key}`
+}
+
+/*Gets the show dates for the bands and console log into the browser url  getting the response*/
+/* we used the fetch method and created 2 varables holding our base url for the backend endpoint and and api key hlding the credentials*/
+ /* we will working on displayng onto page. */
+fetch(`${BASE_URL}showdates/${API_KEY}`, {
+    method: "GET",
+    headers: { "Content-type": "application/json" }
+}).then(res => {
+    return res.json()
+}).then(data => {
+    data.forEach(showdates =>{
+        const markUp = `<ul >
+        <div class="">${showdates.id}</div>
+        <div class="comment-name-style">${showdates.date}</div>
+        <div class="comment-comment-style">${showdates.place}</div>
+        <div>${showdates.location}</div>
+        </ul>`;
+        document.getElementById('shows').insertAdjacentHTML("beforeend", markUp) })
+    console.log(data);
+}).catch(err => {
+    console.log(err.message);
+});
+
+
+// // ! The tickets Array:
+// const ticketsList = [
+//     {
+//         date: new Date(),
+//         venue: "Ronald Lane",
+//         location: "San Frrancisco, CA"
+//     },
+//     {
+//         date: new Date(),
+//         venue: "Pier 3 East",
+//         location: "San Frrancisco, CA"
+//     },
+//     {
+//         date: new Date(),
+//         venue: "Ronald Lane",
+//         location: "San Frrancisco, CA"
+//     },
+//     {
+//         date: new Date(),
+//         venue: "Pier 3 East",
+//         location: "San Frrancisco, CA"
+//     },
+// ]
 
 
 for (let i = 0; i < ticketsList.length; i++) {

@@ -52,6 +52,14 @@
         border-bottom: 2px solid $border-color;
         padding-top: 1rem;
         padding-bottom: 1.3rem;
+
+        &__selected {
+            background-color: rgb(231, 231, 231);
+        }
+
+        &:hover {
+            background-color: rgb(240, 240, 240);
+        }
     }
 
     &__row {

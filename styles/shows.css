@@ -341,6 +341,12 @@ picture {
   padding-top: 1rem;
   padding-bottom: 1.3rem;
 }
+.shows__show__selected {
+  background-color: rgb(231, 231, 231);
+}
+.shows__show:hover {
+  background-color: rgb(240, 240, 240);
+}
 .shows__row {
   padding-bottom: 1rem;
 }

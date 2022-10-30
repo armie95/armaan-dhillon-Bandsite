@@ -595,6 +595,9 @@ picture {
 .comments__username {
   font-weight: 900;
 }
+.comments__comment-id-style {
+  background-color: red;
+}
 .comments__comment {
   display: flex;
   justify-content: space-between;
@@ -631,7 +634,7 @@ picture {
   justify-content: space-between;
   padding-bottom: 0.75rem;
 }
-.comments__comment-username {
+.comments__comment-name-style {
   font-weight: 400;
 }
 .comments__comment-date {
